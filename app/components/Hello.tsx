@@ -5,6 +5,7 @@ const Hello = () => {
     return (
         <View>
             <Text>This is hello component.</Text>
+            <Text>Just a test component to ensure everything is working fine.</Text>
         </View>
     );
 };

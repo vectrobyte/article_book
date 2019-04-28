@@ -1,0 +1,14 @@
+.firebase
+.git
+.idea
+.vscode
+build
+bundle
+dist
+node_modules
+output
+output
+public
+test
+android
+ios

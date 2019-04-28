@@ -13,6 +13,6 @@ axios.defaults.baseURL = '/';
 
 // intercept the response
 axios.interceptors.response.use((response) => {
-  // add any conditions before passing response to the actions.
-  return response;
+    // add any conditions before passing response to the actions.
+    return response;
 });

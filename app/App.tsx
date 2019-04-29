@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
 import Navigator from './navigation';
 
-interface Props {}
-class App extends Component<Props> {
+class App extends Component {
   render() {
     return (
-      <View>
-        <Navigator />
-      </View>
+      <Navigator/>
     );
   }
 }

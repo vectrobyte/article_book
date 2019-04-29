@@ -17,11 +17,9 @@ const RNApp = createStackNavigator(
     },
     Dashboard: {
       screen: Dashboard,
-      navigationOptions: { header: null, gesturesEnabled: false }
     },
     Account: {
       screen: Account,
-      navigationOptions: { header: null, gesturesEnabled: false }
     }
   },
   {

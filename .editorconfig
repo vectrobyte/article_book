@@ -1,0 +1,23 @@
+root = true
+
+# config php files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# config for js, html and css files
+[{*.js, *.jsx,*.ts, *.tsx, *.vue, *.html, *.css}]
+indent_size = 2
+
+# config for Markdown
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# config for JSON and YAML
+[{composer.json, package.json, *.yml}]
+indent_size = 2

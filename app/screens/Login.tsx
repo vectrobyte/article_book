@@ -1,22 +1,28 @@
-import {Text, View} from 'react-native';
+import {Text, View, TextInput, Button} from 'react-native';
 import React, {Component} from 'react';
 
-// const Login = () => {
-//   return (
-//     <View>
-//       <Text>This is Login View.</Text>
-//     </View>
-//   );
-// };
+const Login = () => {
+  return (
+    <View>
+      <Text>Login</Text>
 
-class Login extends Component{
-  render() {
-    return (
       <View>
-        <Text>This is Login View.</Text>
+        <Text>Mobile</Text>
+        <TextInput
+          placeholder="Number one two three"
+        />
       </View>
-    );
-  }
-}
+
+      <View>
+        <Text>Password</Text>
+        <TextInput
+          placeholder="Password"
+        />
+      </View>
+
+      <Button title={'Login'} onPress={() => {}} />
+    </View>
+  );
+};
 
 export default Login;

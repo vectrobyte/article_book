@@ -1,54 +1,58 @@
 module.exports = {
-    'env': {
-        'es6': true,
-        'browser': true,
-        'node': true,
-        'jest': true
+  'env': {
+    'es6': true,
+    'browser': true,
+    'node': true,
+    'jest': true
+  },
+  'parser': 'babel-eslint',
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-native/all'
+  ],
+  'parserOptions': {
+    'ecmaFeatures': {
+      'jsx': true
     },
-    'parser': 'babel-eslint',
-    'extends': [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:react-native/all'
+    'sourceType': 'module'
+  },
+  'plugins': [
+    'react',
+    'react-native'
+  ],
+  'rules': {
+    'indent': [
+      'warn',
+      2
     ],
-    'parserOptions': {
-        'ecmaFeatures': {
-            'jsx': true
-        },
-        'sourceType': 'module'
-    },
-    'plugins': [
-        'react',
-        'react-native'
+    'linebreak-style': [
+      'error',
+      'unix'
     ],
-    'rules': {
-        'indent': [
-            'warn',
-            2
-        ],
-        'linebreak-style': [
-            'error',
-            'unix'
-        ],
-        'quotes': [
-            'warn',
-            'single'
-        ],
-        'semi': [
-            'warn',
-            'always'
-        ],
-        'no-var': [
-            'error'
-        ],
-        'eqeqeq': [
-            'error'
-        ],
-        'no-unused-vars': 'warn',
-        'no-console': 'warn'
-    },
-    'globals': {
-        'fetch': true,
-        '__DEV__': true
-    },
+    'quotes': [
+      'warn',
+      'single'
+    ],
+    'semi': [
+      'warn',
+      'always'
+    ],
+    'no-var': [
+      'error'
+    ],
+    'eqeqeq': [
+      'error'
+    ],
+    'react-native/no-unused-styles': 'warn',
+    'react-native/split-platform-components': 'warn',
+    'react-native/no-inline-styles': 'warn',
+    'react-native/no-color-literals': 'warn',
+    'no-unused-vars': 'warn',
+    'no-console': 'warn'
+  },
+  'globals': {
+    'fetch': true,
+    '__DEV__': true
+  },
 };

@@ -44,6 +44,11 @@ module.exports = {
     'eqeqeq': [
       'error'
     ],
+    'react/jsx-max-props-per-line': [
+      'error', {
+      maximum: 1,
+        when: 'multiline'
+    }],
     'react-native/no-unused-styles': 'warn',
     'react-native/split-platform-components': 'warn',
     'react-native/no-inline-styles': 'warn',

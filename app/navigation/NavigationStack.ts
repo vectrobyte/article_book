@@ -5,7 +5,7 @@ import SignUp from '../screens/SignUp';
 import Dashboard from '../screens/Dashboard';
 import Account from '../screens/Account';
 
-const RNApp = createStackNavigator(
+const NavigationStack = createStackNavigator(
   {
     Login: {
       screen: Login,
@@ -27,4 +27,4 @@ const RNApp = createStackNavigator(
   }
 );
 
-export default createAppContainer(RNApp);
+export default createAppContainer(NavigationStack);

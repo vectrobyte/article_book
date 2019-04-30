@@ -3,6 +3,7 @@ export default {
     borderRadius: 4,
     borderWidth: 0.5,
     color: '#000000',
+    borderColor: '#FFF'
   },
   formControl: {
     marginBottom: 10

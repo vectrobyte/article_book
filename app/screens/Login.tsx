@@ -20,30 +20,30 @@ const Login = ({ navigation }: any) => {
   };
 
   return (
-    <View style={[styles.container, Style.padding(20, 50)]}>
+    <View style={[Style.container, Style.padding(20, 50)]}>
 
-      <Text style={[styles.title, Style.margin(0, 0, 30, 0)]}>Login</Text>
+      <Text style={[Style.title, Style.margin(0, 0, 30, 0)]}>Login</Text>
 
-      <View style={styles.formControl}>
-        <Text style={styles.label}>Email address</Text>
+      <View style={Style.formControl}>
+        <Text style={Style.label}>Email address</Text>
         <TextInput
-          style={styles.textBox}
+          style={Style.textBox}
           value={user.email}
           onChangeText={(email) => setUser({email: email, password: user.password})}
         />
       </View>
 
-      <View style={styles.formControl}>
+      <View style={Style.formControl}>
         <Text>Password</Text>
         <TextInput
           secureTextEntry={true}
-          style={styles.textBox}
+          style={Style.textBox}
           value={user.password}
           onChangeText={(password) => setUser({email: user.email, password: password})}
         />
       </View>
 
-      <View style={styles.formControl}>
+      <View style={Style.formControl}>
         <Button color={'#0e754e'}
           title={'Login'}
           onPress={() => login()}
@@ -62,29 +62,5 @@ const Login = ({ navigation }: any) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    borderColor: '#d6d7da',
-    borderRadius: 4,
-    borderWidth: 0.5,
-    color: '#000000',
-  },
-  formControl: {
-    marginBottom: 10
-  },
-  label: {
-    marginBottom: 5
-  },
-  textBox: {
-    borderColor: 'black',
-    borderWidth: 1,
-    padding: 0,
-    paddingLeft: 10
-  },
-  title: {
-    fontSize: 30,
-  },
-});
 
 export default Login;

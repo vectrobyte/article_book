@@ -1,28 +1,54 @@
-import {Text, View, TextInput, Button} from 'react-native';
-import React, {Component} from 'react';
+import {Text, View, TextInput, Button, StyleSheet} from 'react-native';
+import React from 'react';
+import Style from '../styles';
 
-const Login = () => {
+const Login = ({ navigation }: any) => {
   return (
-    <View>
-      <Text>Login</Text>
+    <View style={[styles.container, Style.padding(20, 50)]}>
 
-      <View>
-        <Text>Mobile</Text>
-        <TextInput
-          placeholder="Number one two three"
-        />
+      <Text style={[styles.title, Style.margin(0, 0, 30, 0)]}>Login</Text>
+
+      <View style={styles.formControl}>
+        <Text style={styles.label}>Email address</Text>
+        <TextInput style={[styles.textBox, Style.padding(0)]} />
       </View>
 
-      <View>
+      <View style={styles.formControl}>
         <Text>Password</Text>
-        <TextInput
-          placeholder="Password"
-        />
+        <TextInput style={[styles.textBox, Style.padding(0)]} />
       </View>
 
-      <Button title={'Login'} onPress={() => {}} />
+      <View style={styles.formControl}>
+        <Button title={'Login'} onPress={() => {navigation.navigate('SignUp');}} />
+      </View>
+      <Text>
+        Create a new account
+      </Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    borderColor: '#d6d7da',
+    borderRadius: 4,
+    borderWidth: 0.5,
+    color: '#000000',
+  },
+  formControl: {
+    marginBottom: 10
+  },
+  label: {
+    marginBottom: 5
+  },
+  textBox: {
+    borderColor: 'black',
+    borderWidth: 1,
+  },
+  title: {
+    fontSize: 30,
+
+  },
+});
 
 export default Login;

@@ -7,7 +7,6 @@ export default {
       paddingLeft: d ? d : (b ? b : a)
     };
   },
-
   margin(a: any, b: any = null, c: any = null, d: any = null) {
     return {
       marginTop: a,
@@ -16,4 +15,7 @@ export default {
       marginLeft: d ? d : (b ? b : a)
     };
   },
+  link: {
+    color: '#266dda'
+  }
 };

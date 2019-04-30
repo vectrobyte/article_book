@@ -1,4 +1,4 @@
-import {Text, View, TextInput, Button, StyleSheet} from 'react-native';
+import {Alert, Text, View, TextInput, Button, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
 import Style from '../styles';
 
@@ -10,9 +10,13 @@ const Login = ({ navigation }: any) => {
 
   const login = () => {
     // validation
-    if (!user.email || !user.password) return;
+    if (!user.email || !user.password) {
+      return Alert.alert('', 'Please fill up the form properly');
+    }
     // navigate to dashboard
     navigation.navigate('Dashboard');
+    // reset form data
+    setUser(initialFormState);
   };
 
   return (
@@ -40,19 +44,21 @@ const Login = ({ navigation }: any) => {
       </View>
 
       <View style={styles.formControl}>
-        <Button
-          color={'#0e754e'}
+        <Button color={'#0e754e'}
           title={'Login'}
           onPress={() => login()}
         />
       </View>
-      <Text>
+      <Text
+        style={[Style.link]}
+        onPress={() => navigation.navigate('ForgotPassword')}>
+        Forgot Password?
+      </Text>
+      <Text
+        style={Style.link}
+        onPress={() => navigation.navigate('SignUp')}>
         Create a new account
       </Text>
-      <View>
-        <Text>Email: {user.email}</Text>
-        <Text>Password: {user.password}</Text>
-      </View>
     </View>
   );
 };
